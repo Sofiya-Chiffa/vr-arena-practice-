@@ -1,0 +1,5 @@
+[
+  {"scenario_id": "SC01", "title": "Космический рейс", "duration_min": 30, "max_participants": 6},
+  {"scenario_id": "SC02", "title": "Пиратский остров", "duration_min": 45, "max_participants": 4},
+  {"scenario_id": "SC03", "title": "Зомби-арена", "duration_min": 20, "max_participants": 8}
+]

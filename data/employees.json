@@ -1,0 +1,8 @@
+[
+  {"employee_id": "E0001", "last_name": "Смирнов", "first_name": "Алексей",
+   "middle_name": "Петрович", "phone": "+79990000001",
+   "email": "smirnov@arena.ru", "position": "инструктор", "salary": 80000},
+  {"employee_id": "E0002", "last_name": "Козлов", "first_name": "Дмитрий",
+   "middle_name": "Олегович", "phone": "+79990000002",
+   "email": "kozlov@arena.ru", "position": "техник", "salary": 70000}
+]

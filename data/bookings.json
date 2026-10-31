@@ -1,0 +1,4 @@
+[
+  {"booking_id": "B0001", "client_id": "C0002", "slot_id": "SL0001",
+   "scenario_id": "SC02", "participants_count": 3, "status": "active"}
+]

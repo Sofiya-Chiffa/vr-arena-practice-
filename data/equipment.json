@@ -1,0 +1,5 @@
+[
+  {"equipment_id": "EQ01", "serial_number": "VR-000123", "type": "headset", "state": "ok"},
+  {"equipment_id": "EQ02", "serial_number": "VR-000124", "type": "headset", "state": "ok"},
+  {"equipment_id": "EQ03", "serial_number": "TRK-77", "type": "tracker", "state": "maintenance"}
+]

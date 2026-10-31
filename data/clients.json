@@ -1,0 +1,6 @@
+[
+  {"client_id": "C0001", "last_name": "Иванов", "first_name": "Иван",
+   "middle_name": "Иванович", "phone": "+79991234567", "email": "ivanov@mail.ru"},
+  {"client_id": "C0002", "last_name": "Петрова", "first_name": "Анна",
+   "middle_name": "Сергеевна", "phone": "+79997654321", "email": "a.petrova@mail.ru"}
+]

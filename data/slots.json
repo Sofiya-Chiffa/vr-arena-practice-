@@ -1,0 +1,7 @@
+[
+  {"slot_id": "SL0001", "date": "2026-11-10", "time_start": "10:00", "status": "booked"},
+  {"slot_id": "SL0002", "date": "2026-11-10", "time_start": "11:00", "status": "free"},
+  {"slot_id": "SL0003", "date": "2026-11-10", "time_start": "12:00", "status": "free"},
+  {"slot_id": "SL0004", "date": "2026-11-10", "time_start": "13:00", "status": "free"},
+  {"slot_id": "SL0005", "date": "2026-11-11", "time_start": "14:00", "status": "free"}
+]
