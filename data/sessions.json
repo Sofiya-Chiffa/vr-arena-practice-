@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "session_id": "S0001",
+    "booking_id": "B0002",
+    "instructor_id": "E0001",
+    "actual_start": "2026-10-31 20:05",
+    "actual_end": "2026-10-31 21:05",
+    "status": "completed"
+  }
+]

@@ -19,7 +19,9 @@ def cmd_slots(target_date):
 def cmd_check(request):
     # Проверить комплектность заявки
     scenarios = data.load("scenarios")
-    print(operations.check_request(request, scenarios))
+    slots = data.load("slots")
+    bookings = data.load("bookings")
+    print(operations.check_request(request, scenarios, slots, bookings))
 
 
 def cmd_book(request):

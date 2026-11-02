@@ -2,9 +2,9 @@ from datetime import datetime, timedelta
 from algorithms import validate_request, find_free_slots
 
 
-def check_request(request, scenarios):
+def check_request(request, scenarios, slots, bookings):
     # Операция 1. Проверить комплектность заявки.
-    return validate_request(request, scenarios)
+    return validate_request(request, scenarios, slots, bookings)
 
 
 def find_free_slot(slots, target_date, current_dt):
