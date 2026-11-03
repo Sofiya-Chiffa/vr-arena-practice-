@@ -14,19 +14,12 @@ python --version
 ```
 ## Структура проекта
 src/
-├── main.py          # точка входа, разбор аргументов командной строки
-├── operations.py    # автоматизируемые операции (проверка, бронь, закрытие)
-├── algorithms.py    # два алгоритма: find_free_slots, validate_request
-├── data.py          # загрузка и сохранение данных в JSON
-├── README.md
-└── data/           # Данные хранятся в JSON-файлах
-    ├── clients.json
-    ├── employees.json
-    ├── scenarios.json
-    ├── slots.json
-    ├── equipment.json
-    ├── bookings.json
-    └── sessions.json
+ - main.py          точка входа, разбор аргументов командной строки 
+ - operations.py    автоматизируемые операции (проверка, бронь, закрытие)
+ - algorithms.py    два алгоритма: find_free_slots, validate_request 
+ - data.py          загрузка и сохранение данных в JSON 
+ - README.md
+ - data/           Данные хранятся в JSON-файлах
 
 # Запуск
 Все команды выполняются из папки src/
