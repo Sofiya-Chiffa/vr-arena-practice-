@@ -32,9 +32,33 @@ src/
 Примеры запуска:
 ```bash
 cd src
-
+```
+```bash
 python main.py slots 2026-11-10
+```
+Вывод:  
+Свободные слоты на 2026-11-10:  
+  SL0002  11:00  
+  SL0003  12:00  
+  SL0004  13:00
+```bash
 python main.py check
+```
+Вывод:  
+Заявка корректна
+```bash
 python main.py book
+```
+Вывод:  
+Бронь создана  
+ {'booking_id': 'B0002', 'client_id': 'C0001', 'slot_id': 'SL0003', 'scenario_id': 'SC01', 'participants_count': 4,
+ 'status': 'active'}
+```bash
 python main.py close B0001 E0001
 ```
+Вывод:  
+Сеанс проведён, услуга оказана  
+ {'session_id': 'S0002', 'booking_id': 'B0001', 'instructor_id': 'E0001', 'actual_start': '2026-11-17 17:21', 'actu
+al_end': '2026-11-17 18:21', 'status': 'completed'}
+
+

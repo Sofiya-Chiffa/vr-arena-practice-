@@ -64,7 +64,7 @@ def main():
             "client_id": "C0001",
             "scenario_id": "SC01",
             "date": "2026-11-10",
-            "time_start": "14:00",
+            "time_start": "12:00",
             "participants_count": 4,
             "phone": "+7 999 123-45-67",
             "slot_id": "SL0003",
@@ -75,7 +75,7 @@ def main():
             "client_id": "C0001",
             "scenario_id": "SC01",
             "date": "2026-11-10",
-            "time_start": "14:00",
+            "time_start": "12:00",
             "participants_count": 4,
             "slot_id": "SL0003",
         }
