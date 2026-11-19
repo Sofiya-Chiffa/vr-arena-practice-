@@ -1,5 +1,6 @@
 package model;
 
+// класс сеанса
 public class Session {
     private final String sessionId;
     private final String bookingId;
@@ -46,15 +47,13 @@ public class Session {
         return actualEnd;
     }
 
-    public void setActualEnd(String actualEnd) {
-        this.actualEnd = actualEnd;
-    }
-
     public String getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    // Операция: завершить сеанс
+    public void complete(String end) {
+        this.actualEnd = end;
+        this.status = "COMPLETED";
     }
 }

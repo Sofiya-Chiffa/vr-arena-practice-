@@ -1,6 +1,7 @@
 package model;
 
 public class Client {
+    // класс клиента
     private final String clientId;
     private final String lastName;
     private final String firstName;

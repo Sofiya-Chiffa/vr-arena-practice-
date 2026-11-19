@@ -1,5 +1,6 @@
 package model;
 
+// класс брони
 public class Booking {
     public enum Status {ACTIVE, CLOSED, CANCELLED}
 
@@ -46,6 +47,22 @@ public class Booking {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public boolean isActive() {
+        return status == Status.ACTIVE;
+    }
+
+    // Операция: закрыть бронь
+    public void close() {
+        if (!isActive()) throw new IllegalStateException("Бронь уже закрыта или отменена");
+        this.status = Status.CLOSED;
+    }
+
+    // Операция: отменить бронь
+    public void cancel() {
+        if (!isActive()) throw new IllegalStateException("Бронь уже закрыта или отменена");
+        this.status = Status.CANCELLED;
     }
 
     public String describe() {

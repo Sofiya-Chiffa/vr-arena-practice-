@@ -1,5 +1,6 @@
 package model;
 
+// класс работника
 public class Employee {
     public enum Role {ADMIN, INSTRUCTOR, TECHNICIAN}
 

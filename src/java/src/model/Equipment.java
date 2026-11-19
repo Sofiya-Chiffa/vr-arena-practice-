@@ -1,5 +1,6 @@
 package model;
 
+// класс оборудования
 public class Equipment {
     public enum State {WORKING, MAINTENANCE, BROKEN}
 

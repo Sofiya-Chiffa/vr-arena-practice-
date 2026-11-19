@@ -1,5 +1,6 @@
 package model;
 
+// класс использования оборудования в сеансах
 public class EquipmentUsage {
     private final String equipmentId;
     private final String sessionId;
