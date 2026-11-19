@@ -12,14 +12,14 @@ public class BookingService {
     }
 
     public Booking bookSlot(String clientId, String slotId, String scenarioId, int participants) {
-        Slot slot = storage.slots.stream()
+        Slot slot = storage.getSlots().stream()
                 .filter(s -> s.getSlotId().equals(slotId))
                 .findFirst().orElse(null);
         if (slot == null) throw new IllegalArgumentException("Слот не найден");
         slot.book();
-        String bookingId = String.format("B%04d", storage.bookings.size() + 1);
+        String bookingId = String.format("B%04d", storage.getBookings().size() + 1);
         Booking booking = new Booking(bookingId, clientId, slotId, scenarioId, participants);
-        storage.bookings.add(booking);
+        storage.getBookings().add(booking);
         return booking;
     }
 }

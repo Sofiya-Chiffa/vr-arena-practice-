@@ -23,9 +23,9 @@ public class ConsoleApp {
 
     // Демо-данные
     private void seedDemoData() {
-        storage.scenarios.add(new Scenario("SC01", "Pirates of the Caribbean", 45, 6));
-        storage.slots.add(new Slot("SL0003", "2026-12-10", "12:00", Slot.Status.FREE));
-        storage.slots.add(new Slot("SL0004", "2026-12-10", "13:30", Slot.Status.FREE));
+        storage.getScenarios().add(new Scenario("SC01", "Pirates of the Caribbean", 45, 6));
+        storage.getSlots().add(new Slot("SL0003", "2026-12-10", "12:00", Slot.Status.FREE));
+        storage.getSlots().add(new Slot("SL0004", "2026-12-10", "13:30", Slot.Status.FREE));
     }
 
     public static void main(String[] args) {
@@ -51,7 +51,7 @@ public class ConsoleApp {
 
     // свободные слоты
     private void cmdSlots(String targetDate) {
-        List<Slot> free = slotService.findFreeSlots(storage.slots, targetDate, LocalDateTime.now());
+        List<Slot> free = slotService.findFreeSlots(storage.getSlots(), targetDate, LocalDateTime.now());
         if (free.isEmpty()) {
             System.out.println("На " + targetDate + " свободных слотов нет.");
             return;
@@ -66,7 +66,7 @@ public class ConsoleApp {
     private void cmdCheck() {
         String msg = Validator.validateRequest(
                 "SC01", "SL0003", 4, "+7 999 123-45-67",
-                storage.scenarios, storage.slots, storage.bookings);
+                storage.getScenarios(), storage.getSlots(), storage.getBookings());
         System.out.println(msg);
     }
 

@@ -14,7 +14,7 @@ public class SlotService {
         List<Slot> result = new ArrayList<>();
         for (Slot slot : slots) {
             if (!slot.getDate().equals(targetDate)) continue;
-            if (!slot.isFree()) continue;
+            if (!slot.isAvailable()) continue;
             if (!slot.startDateTime().isAfter(now)) continue;
             result.add(slot);
         }

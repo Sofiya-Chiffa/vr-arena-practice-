@@ -28,11 +28,11 @@ public final class Validator {
                 .filter(s -> s.getSlotId().equals(slotId))
                 .findFirst().orElse(null);
         if (targetSlot == null) return "Ошибка: слот " + slotId + " не найден";
-        if (!targetSlot.isFree()) return "Ошибка: слот " + slotId + " уже занят";
+        if (!targetSlot.isAvailable()) return "Ошибка: слот " + slotId + " уже занят";
 
         for (Slot slot : slots) {
             if (!slot.getDate().equals(targetSlot.getDate())) continue;
-            if (slot.isFree()) continue;
+            if (slot.isAvailable()) continue;
             for (Booking booking : bookings) {
                 if (!slot.getSlotId().equals(booking.getSlotId())) continue;
                 if (!booking.isActive()) continue;

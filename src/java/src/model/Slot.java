@@ -5,7 +5,7 @@ import util.DateTimeUtil;
 import java.time.LocalDateTime;
 
 // класс слота
-public class Slot {
+public class Slot implements StatusAware {
     public enum Status {FREE, BOOKED, MAINTENANCE, BLOCKED}
 
     private final String slotId;
@@ -44,22 +44,26 @@ public class Slot {
         return DateTimeUtil.parse(date, timeStart);
     }
 
-    public boolean isFree() {
+    @Override
+    public boolean isAvailable() {
         return status == Status.FREE;
+    }
+
+    @Override
+    public String getStatusDescription() {
+        return "Слот " + slotId + " находится в статусе: " + status;
     }
 
     // Операция: зафиксировать слот за клиентом
     public void book() {
-        if (!isFree()) throw new IllegalStateException("Слот " + slotId + " уже занят");
+        if (!isAvailable()) throw new IllegalStateException("Слот " + slotId + " уже занят");
         this.status = Status.BOOKED;
     }
 
-    // Операция: освободить слот
     public void release() {
         this.status = Status.FREE;
     }
 
-    // Алгоритм: пересечение с другим слотом с учётом длительностей сценариев и подготовки
     public boolean overlapsWith(Slot other, Scenario thisScenario, Scenario otherScenario) {
         if (!date.equals(other.getDate())) return false;
         LocalDateTime thisStart = startDateTime();

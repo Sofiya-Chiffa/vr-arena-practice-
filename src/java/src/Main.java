@@ -7,9 +7,9 @@ public class Main {
     public static void main(String[] args) {
         InMemoryStorage storage = new InMemoryStorage();
 
-        storage.scenarios.add(new Scenario("SC01", "Pirates of the Caribbean", 45, 6));
-        storage.slots.add(new Slot("SL0003", "2026-12-10", "12:00", Slot.Status.FREE));
-        storage.slots.add(new Slot("SL0004", "2026-12-10", "13:30", Slot.Status.FREE));
+        storage.getScenarios().add(new Scenario("SC01", "Pirates of the Caribbean", 45, 6));
+        storage.getSlots().add(new Slot("SL0003", "2026-12-10", "12:00", Slot.Status.FREE));
+        storage.getSlots().add(new Slot("SL0004", "2026-12-10", "13:30", Slot.Status.FREE));
 
         SlotService slotService = new SlotService();
         BookingService bookingService = new BookingService(storage);
@@ -17,13 +17,13 @@ public class Main {
 
         // нахождение свободных слотов на дату
         System.out.println("Свободные слоты на 2026-12-10:");
-        slotService.findFreeSlots(storage.slots, "2026-12-10", LocalDateTime.now())
+        slotService.findFreeSlots(storage.getSlots(), "2026-12-10", LocalDateTime.now())
                 .forEach(s -> System.out.println("  " + s.describe()));
 
         // валидация заявки
         String validation = Validator.validateRequest(
                 "SC01", "SL0003", 4, "+7 999 123-45-67",
-                storage.scenarios, storage.slots, storage.bookings);
+                storage.getScenarios(), storage.getSlots(), storage.getBookings());
         System.out.println(validation);
 
         // бронирование слота
