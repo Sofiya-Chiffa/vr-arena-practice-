@@ -1,3 +1,5 @@
+package model;
+
 public class Booking {
     public enum Status {ACTIVE, CLOSED, CANCELLED}
 
@@ -44,5 +46,10 @@ public class Booking {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public String describe() {
+        return "Бронь " + bookingId + " (клиент " + clientId + ", слот " + slotId
+                + ", статус " + status + ")";
     }
 }

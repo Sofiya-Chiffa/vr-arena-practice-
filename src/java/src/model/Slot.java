@@ -1,3 +1,7 @@
+package model;
+
+import util.DateTimeUtil;
+
 import java.time.LocalDateTime;
 
 public class Slot {
@@ -37,5 +41,9 @@ public class Slot {
 
     public LocalDateTime startDateTime() {
         return DateTimeUtil.parse(date, timeStart);
+    }
+
+    public String describe() {
+        return "Слот " + slotId + " (" + date + " " + timeStart + ", " + status + ")";
     }
 }

@@ -1,3 +1,5 @@
+package model;
+
 public class Scenario {
     private final String scenarioId;
     private final String title;

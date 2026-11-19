@@ -1,3 +1,5 @@
+package model;
+
 public class EquipmentUsage {
     private final String equipmentId;
     private final String sessionId;

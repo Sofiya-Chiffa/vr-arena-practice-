@@ -1,22 +1,30 @@
-public class Client {
-    private final String clientId;
+package model;
+
+public class Employee {
+    public enum Role {ADMIN, INSTRUCTOR, TECHNICIAN}
+
+    private final String employeeId;
     private final String lastName;
     private final String firstName;
     private final String middleName;
     private final String phone;
     private final String email;
+    private final Role position;
+    private final float salary;
 
-    public Client(String clientId, String lastName, String firstName, String middleName, String phone, String email) {
-        this.clientId = clientId;
+    public Employee(String employeeId, String lastName, String firstName, String middleName, String phone, String email, Role position, float salary) {
+        this.employeeId = employeeId;
         this.lastName = lastName;
         this.firstName = firstName;
         this.middleName = middleName;
         this.phone = phone;
         this.email = email;
+        this.position = position;
+        this.salary = salary;
     }
 
-    public String getClientId() {
-        return clientId;
+    public String getEmployeeId() {
+        return employeeId;
     }
 
     public String getLastName() {
@@ -37,5 +45,13 @@ public class Client {
 
     public String getEmail() {
         return email;
+    }
+
+    public float getSalary() {
+        return salary;
+    }
+
+    public Role getRole() {
+        return position;
     }
 }

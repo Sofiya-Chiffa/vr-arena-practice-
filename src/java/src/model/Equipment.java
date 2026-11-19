@@ -1,3 +1,5 @@
+package model;
+
 public class Equipment {
     public enum State {WORKING, MAINTENANCE, BROKEN}
 
