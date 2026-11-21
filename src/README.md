@@ -34,7 +34,7 @@ src/
 cd src
 ```
 ```bash
-python main.py slots 2026-11-10
+python main.py slots 2026-12-10
 ```
 Вывод:  
 Свободные слоты на 2026-11-10:  

@@ -24,8 +24,11 @@ public class ConsoleApp {
     // Демо-данные
     private void seedDemoData() {
         storage.getScenarios().add(new Scenario("SC01", "Pirates of the Caribbean", 45, 6));
+    storage.getSlots().add(new Slot("SL0001", "2026-12-10", "12:00", Slot.Status.BOOKED));
+        storage.getSlots().add(new Slot("SL0002", "2026-12-10", "11:00", Slot.Status.FREE));
         storage.getSlots().add(new Slot("SL0003", "2026-12-10", "12:00", Slot.Status.FREE));
         storage.getSlots().add(new Slot("SL0004", "2026-12-10", "13:30", Slot.Status.FREE));
+        storage.getSlots().add(new Slot("SL0004", "2026-12-11", "14:00", Slot.Status.FREE));
     }
 
     public static void main(String[] args) {
