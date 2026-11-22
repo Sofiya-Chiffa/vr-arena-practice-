@@ -11,6 +11,7 @@ ENTITIES = {
     "equipment": "equipment.json",
     "bookings": "bookings.json",
     "sessions": "sessions.json",
+    "equipment_usage": "equipment_usage.json",
 }
 
 

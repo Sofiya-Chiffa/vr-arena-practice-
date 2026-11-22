@@ -24,11 +24,14 @@ public class ConsoleApp {
     // Демо-данные
     private void seedDemoData() {
         storage.getScenarios().add(new Scenario("SC01", "Pirates of the Caribbean", 45, 6));
-    storage.getSlots().add(new Slot("SL0001", "2026-12-10", "12:00", Slot.Status.BOOKED));
+        storage.getSlots().add(new Slot("SL0001", "2026-11-10", "12:00", Slot.Status.BOOKED));
         storage.getSlots().add(new Slot("SL0002", "2026-12-10", "11:00", Slot.Status.FREE));
         storage.getSlots().add(new Slot("SL0003", "2026-12-10", "12:00", Slot.Status.FREE));
-        storage.getSlots().add(new Slot("SL0004", "2026-12-10", "13:30", Slot.Status.FREE));
+        storage.getSlots().add(new Slot("SL0004", "2026-12-10", "13:00", Slot.Status.FREE));
         storage.getSlots().add(new Slot("SL0005", "2026-12-11", "14:00", Slot.Status.FREE));
+        storage.getBookings().add(new Booking("B0001", "C0001", "SL0001", "SC01", 3));
+        storage.addClient(new Client("C0001", "Иванов", "Иван", "Иванович", "+7 999 123-45-67", "ivan@mail.ru"));
+        storage.addEmployee(new Employee("E0001", "Петров", "Петр", "Петрович", "+7 999 765-43-21", "petr@mail.ru", Employee.Role.INSTRUCTOR, 50000));
     }
 
     public static void main(String[] args) {
@@ -44,10 +47,10 @@ public class ConsoleApp {
         switch (cmd) {
             case "slots" -> cmdSlots(args.length > 1 ? args[1] : LocalDateTime.now().toLocalDate().toString());
             case "check" -> cmdCheck();
-            case "book"  -> cmdBook();
+            case "book" -> cmdBook();
             case "close" -> cmdClose(
                     args.length > 1 ? args[1] : "B0001",
-                    args.length > 2 ? args[2] : "E0001");
+                    args.length > 2 ? args[2] : "E0003");
             default -> System.out.println("Неизвестная команда: " + cmd);
         }
     }
@@ -91,7 +94,7 @@ public class ConsoleApp {
                     bookingId, instructorId, LocalDateTime.now(), "COMPLETED");
             System.out.println("Сеанс проведён, услуга оказана");
             System.out.println(" Сеанс " + session.getSessionId()
-                    + " (" + session.getActualStart() + " — " + session.getActualEnd() + ")");
+                    + " (" + session.getActualStart() + " - " + session.getActualEnd() + ")");
         } catch (RuntimeException e) {
             System.out.println(e.getMessage());
         }

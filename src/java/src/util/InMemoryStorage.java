@@ -53,6 +53,13 @@ public class InMemoryStorage {
         clients.add(c);
     }
 
+    public Client getClient(String clientId) {
+        for (Client c : clients) {
+            if (c.getClientId().equals(clientId)) return c;
+        }
+        return null;
+    }
+
     public List<Employee> getEmployees() {
         return employees;
     }

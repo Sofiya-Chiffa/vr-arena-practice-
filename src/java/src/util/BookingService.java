@@ -1,7 +1,6 @@
 package util;
 
-import model.Booking;
-import model.Slot;
+import model.*;
 
 // операция бронирования:
 public class BookingService {
@@ -12,6 +11,8 @@ public class BookingService {
     }
 
     public Booking bookSlot(String clientId, String slotId, String scenarioId, int participants) {
+        Client client = storage.getClient(clientId);
+        if (client == null) throw new IllegalArgumentException("Клиент не найден");
         Slot slot = storage.getSlots().stream()
                 .filter(s -> s.getSlotId().equals(slotId))
                 .findFirst().orElse(null);

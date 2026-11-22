@@ -6,23 +6,36 @@
 out/
 target/
 build/
+bin/
+dist/
 .gradle/
 
 # Python
 __pycache__/
 *.py[cod]
+*$py.class
 *.egg-info/
+*.egg
 .venv/
 venv/
 env/
 .pytest_cache/
 .mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+*.cover
 
 # Java
 *.class
 *.jar
 *.war
+*.ear
 *.log
+
+hs_err_pid*
+replay_pid*
+*.hprof
 
 # OS
 .DS_Store
@@ -30,4 +43,22 @@ Thumbs.db
 
 # Env / secrets
 .env
+.env.*
 *.local
+*.secret
+*.key
+
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+/nbproject/private/
+/nbbuild/
+/nbdist/
+/.nb-gradle/
+.vscode/
+desktop.ini
+

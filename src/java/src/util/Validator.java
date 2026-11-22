@@ -49,7 +49,7 @@ public final class Validator {
 
         if (!scenario.canHost(participants)) {
             return "Ошибка: количество участников " + participants
-                    + " превышает допустимый максимум " + scenario.getMaxParticipants();
+                    + " должно быть от 1 до " + scenario.getMaxParticipants();
         }
 
         String digits = phone.replaceAll("\\D", "");

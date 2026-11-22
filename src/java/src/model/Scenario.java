@@ -36,6 +36,6 @@ public class Scenario {
     }
 
     public boolean canHost(int participants) {
-        return participants <= maxParticipants;
+        return participants <= maxParticipants && participants > 0;
     }
 }
