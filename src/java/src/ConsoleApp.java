@@ -28,7 +28,7 @@ public class ConsoleApp {
         storage.getSlots().add(new Slot("SL0002", "2026-12-10", "11:00", Slot.Status.FREE));
         storage.getSlots().add(new Slot("SL0003", "2026-12-10", "12:00", Slot.Status.FREE));
         storage.getSlots().add(new Slot("SL0004", "2026-12-10", "13:30", Slot.Status.FREE));
-        storage.getSlots().add(new Slot("SL0004", "2026-12-11", "14:00", Slot.Status.FREE));
+        storage.getSlots().add(new Slot("SL0005", "2026-12-11", "14:00", Slot.Status.FREE));
     }
 
     public static void main(String[] args) {
